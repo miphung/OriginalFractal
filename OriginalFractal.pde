@@ -11,13 +11,14 @@ public void draw()
 }
 public void myFractal(int x, int y, int siz)
 {
-	if(siz>5)
+	if(siz>1)
 	{
 		//fill((int)Math.random()*255, (int)Math.random()*255, (int)Math.random()*255);
 		ellipse(x, y, siz, siz);
-		myFractal(x+2, y+siz/2, siz/3);
-		myFractal(x-2, y-siz/2, siz/3);
-		myFractal(x-siz/2, y-2,siz/3);
-		myFractal(x+siz/2, y+2,siz/3);
+		//bezier(x+20, y+60, x+15, y+70, x+25, y+70, x+20, y+60);
+		arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);
+		myFractal(x+2, y+siz/5, siz/3);
+		myFractal(x-2, y-siz/5, siz/3);
+		//bezier((float)x+50, (float)y+20, (float)x-20, (float)y-30, (float)x-20, (float)y+30, (float)x+50, (float)y+80);
 	}
 }
